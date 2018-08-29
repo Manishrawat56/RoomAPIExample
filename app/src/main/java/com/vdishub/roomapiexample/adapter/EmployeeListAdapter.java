@@ -66,9 +66,9 @@ public class EmployeeListAdapter  extends RecyclerView.Adapter<EmployeeListAdapt
     public void onBindViewHolder(EmployeeViewHolder holder, int position) {
         if (mEmployees != null) {
             Employee current = mEmployees.get(position);
-            holder.idView.setText(""+current.getId());
-            holder.nameView.setText(current.getName());
-            holder.ageView.setText(""+current.getAge());
+            holder.idView.setText("Employee id   : "+current.getId());
+            holder.nameView.setText("Employee name :"+current.getName());
+            holder.ageView.setText("Employee age  :"+current.getAge());
 
         } else {
             // Covers the case of data not being ready yet.

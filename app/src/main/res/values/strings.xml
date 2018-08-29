@@ -2,9 +2,9 @@
     <string name="app_name">RoomAPIExample</string>
     <string name="action_settings">Settings</string>
 
-    <string name="hint_employee_name">name...</string>
-    <string name="hint_employee_id">Id...</string>
-    <string name="hint_employee_age">Age...</string>
+    <string name="hint_employee_name">Enter employee name</string>
+    <string name="hint_employee_id">Enter unique id</string>
+    <string name="hint_employee_age">Enter age</string>
     <string name="button_save">Save</string>
     <string name="empty_not_saved">Employee is not saved because it is empty.</string>
 </resources>

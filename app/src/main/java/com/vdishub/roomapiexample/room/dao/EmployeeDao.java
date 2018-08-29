@@ -19,12 +19,25 @@ import java.util.List;
  */
 @Dao
 public interface EmployeeDao {
+    /**
+     * Insert.
+     *
+     * @param employee the employee
+     */
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insert(Employee employee);
 
+    /**
+     * Delete all.
+     */
     @Query("DELETE FROM emp_table")
     void deleteAll();
 
-    @Query("SELECT * from emp_table ORDER BY emp_name ASC")
+    /**
+     * Gets all employees.
+     *
+     * @return the all employees
+     */
+    @Query("SELECT * from emp_table ORDER BY id ASC")
     LiveData<List<Employee>> getAllEmployees();
 }

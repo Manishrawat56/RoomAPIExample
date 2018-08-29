@@ -22,9 +22,20 @@ import com.vdishub.roomapiexample.room.entity.Employee;
  */
 @Database(entities = {Employee.class}, version = 1)
 public abstract class AppDatabase extends RoomDatabase {
+    /**
+     * Employee dao employee dao.
+     *
+     * @return the employee dao
+     */
     public abstract EmployeeDao employeeDao();
     private static AppDatabase INSTANCE;
 
+    /**
+     * Gets database.
+     *
+     * @param context the context
+     * @return the database
+     */
     public static AppDatabase getDatabase(final Context context) {
         if (INSTANCE == null) {
             synchronized (AppDatabase.class) {
@@ -53,6 +64,11 @@ public abstract class AppDatabase extends RoomDatabase {
 
         private final EmployeeDao mDao;
 
+        /**
+         * Instantiates a new Populate db async.
+         *
+         * @param db the db
+         */
         PopulateDbAsync(AppDatabase db) {
             mDao = db.employeeDao();
         }

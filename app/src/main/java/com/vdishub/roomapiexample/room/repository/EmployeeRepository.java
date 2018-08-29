@@ -21,15 +21,33 @@ import java.util.List;
 public class EmployeeRepository {
     private EmployeeDao employeeDao;
     private LiveData<List<Employee>> mAllEmployees;
+
+    /**
+     * Instantiates a new Employee repository.
+     *
+     * @param application the application
+     */
     public EmployeeRepository(Application application){
         AppDatabase db = AppDatabase.getDatabase(application);
         employeeDao = db.employeeDao();
         mAllEmployees = employeeDao.getAllEmployees();
 
     }
+
+    /**
+     * Gets all employees.
+     *
+     * @return the all employees
+     */
     public LiveData<List<Employee>> getAllEmployees() {
         return mAllEmployees;
     }
+
+    /**
+     * Insert.
+     *
+     * @param employee the employee
+     */
     public void insert (Employee employee) {
         new insertAsyncTask(employeeDao).execute(employee);
     }
@@ -38,6 +56,11 @@ public class EmployeeRepository {
 
         private EmployeeDao mAsyncTaskDao;
 
+        /**
+         * Instantiates a new Insert async task.
+         *
+         * @param dao the dao
+         */
         insertAsyncTask(EmployeeDao dao) {
             mAsyncTaskDao = dao;
         }

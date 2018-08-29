@@ -21,11 +21,7 @@
     <!-- The default font for RecyclerView items is too small.
 The margin is a simple delimiter between the Employees. -->
     <style name="Employee_title">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">26dp</item>
-        <item name="android:textSize">24sp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:layout_marginBottom">6dp</item>
-        <item name="android:paddingLeft">8dp</item>
+
     </style>
 </resources>

@@ -11,9 +11,25 @@ import android.widget.EditText;
 import com.vdishub.roomapiexample.R;
 import com.vdishub.roomapiexample.room.entity.Employee;
 
+/**
+ * Created by vdishub.
+ * Date: 28/8/18
+ * Time: 10:20 AM
+ *
+ * @author Manish rawat
+ */
 public class NewEmployeeActivity extends AppCompatActivity {
+    /**
+     * The constant EXTRA_EMP_NAME.
+     */
     public static final String EXTRA_EMP_NAME = "emp_name";
+    /**
+     * The constant EXTRA_EMP_ID.
+     */
     public static final String EXTRA_EMP_ID = "emp_id";
+    /**
+     * The constant EXTRA_EMP_AGE.
+     */
     public static final String EXTRA_EMP_AGE = "emp_age";
 
     private EditText mEditIdView,empNameView,empAgeView;

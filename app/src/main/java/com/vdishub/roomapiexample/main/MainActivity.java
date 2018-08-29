@@ -24,7 +24,11 @@ import com.vdishub.roomapiexample.room.viewmodel.EmployeeViewModel;
 import java.util.List;
 
 /**
+ * Created by vdishub.
+ * Date: 28/8/18
+ * Time: 10:20 AM
  *
+ * @author Manish rawat
  */
 public class MainActivity extends AppCompatActivity {
     /**
@@ -50,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
         mEmployeeViewModel = ViewModelProviders.of(this).get(EmployeeViewModel.class);
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
-
+        /*recyclerView.addItemDecoration(new LineDividerItemDecoration(this, R.drawable.line_divider))*/
         final EmployeeListAdapter adapter = new EmployeeListAdapter(this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

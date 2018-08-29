@@ -20,14 +20,30 @@ import java.util.List;
 public class EmployeeViewModel extends AndroidViewModel{
     private EmployeeRepository mRepository;
     private LiveData<List<Employee>> mAllEmployees;
+
+    /**
+     * Instantiates a new Employee view model.
+     *
+     * @param application the application
+     */
     public EmployeeViewModel(@NonNull Application application) {
         super(application);
         mRepository = new EmployeeRepository(application);
         mAllEmployees = mRepository.getAllEmployees();
     }
 
+    /**
+     * Gets all employees.
+     *
+     * @return the all employees
+     */
     public LiveData<List<Employee>> getmAllEmployees() { return mAllEmployees; }
 
+    /**
+     * Insert.
+     *
+     * @param employee the employee
+     */
     public void insert(Employee employee) {
         mRepository.insert(employee);
     }
